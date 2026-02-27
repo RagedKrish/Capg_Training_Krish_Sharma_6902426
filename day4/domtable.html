@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5x5 Table using DOM</title>
+</head>
+<body>
+
+<h2>5 × 5 Table (DOM Created)</h2>
+
+
+<script>
+    // create table element
+    let table = document.createElement("table");
+    table.border = "3";
+    table.style.borderCollapse = "collapse";
+
+    // create 5 rows
+    for (let i = 0; i < 5; i++) {
+
+        let row = document.createElement("tr");
+
+        // create 5 columns
+        for (let j = 0; j < 5; j++) {
+
+            let cell = document.createElement("td");
+            cell.textContent = `Row ${i+1}, Col ${j+1}`;
+            cell.style.padding = "10px";
+
+            row.appendChild(cell);
+        }
+
+        table.appendChild(row);
+    }
+
+    // add table to body
+    document.body.append(table);
+</script>
+
+</body>
+</html>

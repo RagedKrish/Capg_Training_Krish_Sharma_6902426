@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="theme">Theme</button>
+
+    <script>
+        let isblack=false;
+        let theme=document.getElementById("theme")
+        theme.addEventListener("click",()=>{
+            if(isblack){
+                document.body.style.backgroundColor="white";
+                isblack=!isblack;
+            }
+            else{
+                document.body.style.backgroundColor="black";
+                isblack=!isblack;
+
+            }
+        })
+    </script>
+    
+</body>
+</html>

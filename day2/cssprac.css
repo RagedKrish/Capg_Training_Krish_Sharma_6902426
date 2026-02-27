@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+/* TAGNAME SELECTOR */
+body {
+    background-image: url(Profile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.krish{
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    margin: 100px;
+}
+/* ID SELECTOR */
+#header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CLASS SELECTOR */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* GROUPING SELECTOR */
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* COMBINATOR SELECTOR (DESCENDENT) */
+.card p {
+    color: #555;
+}
+
+/* CHILD SELECTOR */
+nav > a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* PSEUDO CLASS */
+nav > a:hover {
+    color: yellow;
+}
+
+/* ATTRIBUTE SELECTOR */
+input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid gray;
+}
+
+/* PSEUDO ELEMENT */
+h2::after {
+    content: " ✨";
+}
+
+/* BOX MODEL */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* FIRST CHILD */
+.card p:first-child {
+    font-weight: bold;
+}
+
+/* BUTTON STYLE */
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #222;
+    color: white;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* FOOTER */
+#footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100vw;
+    margin-top: 30px;
+    position: fixed;
+    bottom:0px 
+}

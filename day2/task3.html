@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Property Practice</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f5f7fb;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1da1c2;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    color: #4a4a6a;
+}
+.container {
+    border: 2px solid #ccc;
+    padding: 40px 20px;
+    margin-top: 30px;
+    height: 1250px;
+    position: relative;
+    background: white;
+}
+.relative {
+    position: relative;
+    bottom: 50px;
+    background: #57b894;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.absolute {
+    position: absolute;
+    right: 20px;
+    bottom:-8px;
+    height: 30px;
+    background: #c48a3a;
+    padding: 20px;
+    font-weight: bold;
+}
+.static {
+    position: static;
+    background: #7a8399;
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="fixed">fixed</div>
+
+<h1>Position Property Practice</h1>
+
+<div class="container">
+
+    <div class="relative">
+        relative
+        <div class="absolute">absolute</div>
+    </div>
+
+    <div class="static">static</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <div>hi</div>
+        <div class="hello">hello</div>
+        <div>bye</div>
+        <div>good</div>
+        <div class="h44">h1</div>
+        <div class="h44">h2</div>
+        <div class="h44">h3</div>
+        <div class="h44">h4</div>
+        <button id="click">clickme</button>
+    </div>
+    <script>
+        let div=document.body.firstElementChild.children
+        let arr=Array.from(div)
+        console.log(arr)
+        var color=["red","green","Blue","Purple","grey","orange","yellow","wheat"]
+        var i=0
+        var font=30
+        arr.map((ele)=>{
+            console.log(ele.style)
+            ele.style.color=color[i]
+            ele.style.fontSize=font+"px"
+            i++
+            font=font+20
+        })
+        let h1=document.querySelectorAll(".h44")
+        console.log(h1)
+        let img1=document.createElement("img")
+        img1.setAttribute("src","bmw.jpg")
+        document.body.appendChild(img1)
+        console.log(document.body)
+        let he1=document.createElement("h1")
+        he1.innerHTML="Nimish pagal"
+        document.body.append(he1)
+        he1.setAttribute("id","h5")
+        console.log(he1)
+        document.body.removeChild(he1)
+        let btn=document.getElementById("click")
+        
+        btn.addEventListener("onclick",()=>{
+            alert("Nimish bhadwe")
+        })
+    </script>
+  </body>
+</html>

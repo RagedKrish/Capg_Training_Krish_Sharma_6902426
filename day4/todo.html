@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+      }
+
+      .container {
+        background: white;
+        padding: 20px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .input-area {
+        display: flex;
+        gap: 10px;
+      }
+
+      input {
+        flex: 1;
+        padding: 8px;
+      }
+
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+
+      li {
+        margin-top: 10px;
+        padding: 8px;
+        background: #eee;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todo List</h2>
+
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+        <button id="addBtn">Add</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+    <div class="container">
+      <h2>Done Task</h2>
+      <ul id="DoneList"></ul>
+    </div>
+
+    <script>
+      let ul = document.getElementById("taskList");
+      let input = document.getElementById("taskInput");
+      let but = document.getElementById("addBtn");
+      let done = document.getElementById("DoneList");
+
+      let taskId = 0;
+
+      but.addEventListener("click", () => {
+        if (input.value == "") return;
+
+        let list = document.createElement("li");
+        list.style.display="flex";
+        taskId++;
+        list.dataset.id = taskId;
+
+        let d1 = document.createElement("div");
+        d1.innerHTML = input.value;
+
+        let b1 = document.createElement("button");
+        b1.innerHTML = "Delete";
+        b1.className = "delete";
+
+        let b2 = document.createElement("button");
+        b2.innerHTML = "Done";
+        b2.className = "done";
+
+        let b3 = document.createElement("button");
+        b3.innerHTML = "Undone";
+        b3.className = "undone";
+        b3.style.display = "none";
+
+        list.appendChild(d1);
+        list.appendChild(b2);
+        list.appendChild(b3);
+        list.appendChild(b1);
+
+        ul.appendChild(list);
+
+        input.value = "";
+      });
+
+      ul.addEventListener("click", function (e) {
+        // DELETE
+        if (e.target.classList.contains("delete")) {
+          let parent = e.target.parentElement;
+          let id = parent.dataset.id;
+
+          done.querySelectorAll("li").forEach((item) => {
+            if (item.dataset.id === id) item.remove();
+          });
+
+          parent.remove();
+        }
+
+        // DONE
+        else if (e.target.classList.contains("done")) {
+          let parent = e.target.parentElement;
+          let id = parent.dataset.id;
+
+          parent.querySelector("div").style.textDecoration = "line-through";
+          parent.querySelector(".done").style.display = "none";
+          parent.querySelector(".undone").style.display = "block";
+
+          let list = document.createElement("li");
+          list.innerHTML = parent.querySelector("div").innerHTML;
+          list.dataset.id = id;
+
+          done.appendChild(list);
+        }
+
+        // UNDONE
+        else if (e.target.classList.contains("undone")) {
+          let parent = e.target.parentElement;
+          let id = parent.dataset.id;
+
+          parent.querySelector("div").style.textDecoration = "";
+          parent.querySelector(".done").style.display = "block";
+          parent.querySelector(".undone").style.display = "none";
+
+          done.querySelectorAll("li").forEach((item) => {
+            if (item.dataset.id === id) item.remove();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

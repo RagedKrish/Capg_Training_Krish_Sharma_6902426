@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count">0</h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="reset">reset</button>
+
+    <script>
+        let count=document.getElementById("count")
+        let plus=document.getElementById("plus")
+        let minus=document.getElementById("minus")
+        let reset=document.getElementById("reset")
+        let counter=0
+        plus.addEventListener("click",()=>{
+            counter++;
+            count.textContent=counter
+        })
+        minus.addEventListener("click",()=>{
+            counter--;
+            count.textContent=counter
+        })
+        reset.addEventListener("click",()=>{
+            counter=0;
+            count.textContent=counter
+        })
+    </script>
+    
+</body>
+</html>
