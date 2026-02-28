@@ -3,7 +3,7 @@ let naam1="Krish"
 
 //type annotation
 let naam:undefined=undefined;
-console.log(`${naam} bhadwa`)
+console.log(`${naam}`)
 let g:any=20
 
 let arr:number[]=[1,2,3,4]
@@ -25,7 +25,7 @@ function greet(name,age?){
 greet("Krish",100)
 
 let a:Function=():number=>{
-    console.log("Nimish Bhadwa");
+    console.log("Nimish");
     return 10
 }
 

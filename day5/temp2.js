@@ -5,7 +5,6 @@ var nimish = {
 var sahil = {
     name: "Sahil",
     age: 69,
-    size: "0.5 cm",
     breed: function (name) {
         return name;
     }

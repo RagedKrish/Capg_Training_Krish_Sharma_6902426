@@ -12,7 +12,6 @@ let nimish:Person={
 interface animal{
     name:string,
     age?:number,
-    size:string,
 }
 
 interface dog extends animal{
@@ -23,7 +22,6 @@ interface dog extends animal{
 let sahil:dog={
     name:"Sahil",
     age:69,
-    size:"0.5 cm",
     breed(name:string){
         return name
     }

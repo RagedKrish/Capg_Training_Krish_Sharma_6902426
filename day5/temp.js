@@ -2,7 +2,7 @@
 var naam1 = "Krish";
 //type annotation
 var naam = undefined;
-console.log("".concat(naam, " bhadwa"));
+console.log("".concat(naam));
 var g = 20;
 var arr = [1, 2, 3, 4];
 var tup = ["efwv", 23, false];
@@ -15,7 +15,7 @@ function greet(name, age) {
 }
 greet("Krish", 100);
 var a = function () {
-    console.log("Nimish Bhadwa");
+    console.log("Nimish");
     return 10;
 };
 console.log(a());
