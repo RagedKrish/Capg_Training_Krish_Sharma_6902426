@@ -15,7 +15,7 @@ import {test} from "@playwright/test"
 // getbyTitle()
 // getbyPlaceholder()
 // getbyRole()
-// getbyTextId()
+// getbyTestId()
 
 test("Get_by_methods",async ({page})=>{
     // await page.goto('https://practicetestautomation.com/practice-test-login/');
@@ -28,4 +28,9 @@ test("Get_by_methods",async ({page})=>{
 
     await page.goto('https://sahil.com/');
     await page.getByAltText('BLACK AND PINK LEHENGA SAREE').click();
+})
+
+test("getByTestId",async ({page})=>{
+    await page.goto("https://www.saucedemo.com/");
+    await page.getByTestId("username").fill("Nimish");
 })
