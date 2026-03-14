@@ -8,6 +8,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.3.5"
   },

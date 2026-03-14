@@ -1,0 +1,17 @@
+[
+    {
+        "url":"https://practicetestautomation.com/practice-test-login/",
+        "username":"Krish",
+        "password":"1234"
+    },
+    {
+        "url":"https://practicetestautomation.com/practice-test-login/",
+        "username":"Nimish",
+        "password":"2345"
+    },
+    {
+        "url":"https://practicetestautomation.com/practice-test-login/",
+        "username":"student",
+        "password":"Password123"
+    }
+]
