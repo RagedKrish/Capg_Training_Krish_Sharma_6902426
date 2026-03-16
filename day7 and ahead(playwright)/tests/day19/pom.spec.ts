@@ -10,9 +10,7 @@ test("pom",async({page})=>{
     let examplepage=new example(page);
     for(let u of userfile){
         await page.goto(u.url);
-        await examplepage.usernameTF.fill(u.username);
-        await examplepage.passwordTF.fill(u.password);
-        await examplepage.SubmitBtn.click();
+        await examplepage.login(u.username,u.password);
         await page.waitForTimeout(1000);
     }
 })
