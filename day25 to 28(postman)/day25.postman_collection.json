@@ -1,0 +1,32 @@
+{
+  "info": {
+    "_postman_id": "49bbddb2-d11d-405e-aa2e-43afbc7cc634",
+    "name": "day25",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36655176"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://petstore.swagger.io/v2/pet/7",
+          "protocol": "https",
+          "host": [
+            "petstore",
+            "swagger",
+            "io"
+          ],
+          "path": [
+            "v2",
+            "pet",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
